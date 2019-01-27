@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* MIXIN
+-----------
+ メディアクエリ */
+@mixin media-pc{
+    @media screen and (min-width: 769px){
+        @content;
+    }
+}
+@mixin media-sp{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+
+/* reset ---------------- */
+html,body,h1,h2,h3,h4,h5,h6,div,ul,ol,dl,li,dt,dd,p,img,a,table,tr,th,td {margin:0;padding:0;border:0;font-size: 100%;vertical-align:middle;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+article, header, footer, aside, figure, figcaption, nav, section {display:block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body {line-height: 1;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+ol,ul {list-style:none; list-style-type:none;}
+table {border-collapse:collapse;border-spacing:0;}
+input,textarea {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+input[type="button"],input[type="submit"]{-webkit-appearance: none;
+&:hover{cursor: pointer;}}
+
+/* clearfix ----------------- */
+*::after {display:block;clear:both;}
+.clearfix {zoom:1;
+&::after {content:"";}
+}
+
+/* media query ----------------*/
+.nopc {@include media-pc {display: none;}}
+.nosp {@include media-sp {display: none;}}
+
+/* 色 */
+$logoColor:#FE6DCD;
+$mainColor: #E3BE3A;
+$mainColor2: #EFE9CB;
+$subColor: #57360D;
+$subColor2: #A3892A;
+a {color: #1B78B0}
+a:hover {color: $subColor;}
+
+/* フォント */
+.small {font-size: 80%;}
+.big {font-size: 120%;}
+.caution {color: #BA2933;}
+.pr {color: #B13A89;}
+
+/* 背景 */
+.bg-main {background-color: $mainColor; color: #fff;}
+.bg-main2 {background-color: $mainColor2; color: $subColor;}
+.bg-logo {background-color: $logoColor; color: #fff;}
+///* パターン・装飾 */
+.bg-dot {
+	background-image:
+	 radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px);
+	background-size: 5px 5px;
+}
+.radius5 {border-radius: 5px;}
+
+/* 位置・ブロック */
+.c {text-align: center;}
+.center {margin: 0 auto;}
+.mart10 {margin-top: 10px;}
+.marb10 {margin-bottom: 10px;}
+.padt20 {padding-top: 20px;}
+/* 大きさ */
+.w90per {width: 90%;}
+
+/* flexbox
+①親 定義　Android 4.3までの標準ブラウザ→box仕様
+②親 横方向の配置 (デフォcenter)
+③親 縦方向の配置 (デフォcenter)
+④親 並び方向 横row 縦colum
+⑤子 伸縮率
+*/
+/* ① */@mixin flexbox {display:-webkit-box; display: -webkit-flex; display: flex;}
+/* ② */ @mixin flexbox-justify($box:center,$flex:center) {-webkit-box-pack:$box;-webkit-justify-content: $flex; justify-content: $flex;}
+/* ③ */@mixin flexbox-align($box:center,$flex:center) {-webkit-box-align:$box;-webkit-align-items: $flex;align-items:$flex;}
+/* ④ */@mixin flexbox-direction($box:horizontal,$flex:row) {-webkit-box-orient:$box;-webkit-flex-direction: $flex;flex-direction: $flex;}
+/* ⑤ */@mixin flexbox-grow($per:1) {-webkit-box-flex: $per; -webkit-flex-grow:$per; flex-grow: $per;}
+.flexbox-grow {@include flexbox-grow;}
