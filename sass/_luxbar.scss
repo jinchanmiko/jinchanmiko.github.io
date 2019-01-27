@@ -182,9 +182,10 @@
 .luxbar-menu-light,
 .luxbar-menu-light .dropdown ul {
   background-color: #fffbf7;
-@include media-sp{  background-image: url(img/hikarinotobira.jpg);
+@include media-sp{  background-image: url(img/hikarinotobira.jpg);}
+@include media-pc{ background-image: url(img/hikarinotobira2.jpg);}
   background-size:cover;
-  background-position: center top;}
+  background-position: center top;
   color: $subColor; }
 .luxbar-item {text-shadow: 0 0px 1px #fff,0 0 5px #fff,0 0 10px #fff}
 .luxbar-menu-light .active,
