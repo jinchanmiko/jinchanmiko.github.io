@@ -16,3 +16,17 @@ _window.on('scroll',function(){
  
 _window.trigger('scroll');
 });
+
+//TOPページ＃リンクをクリックでチェックボックスOFF
+$(function(){
+    $(".chkbox").on("click", function (evt) {
+
+        chk_status = $("#luxbar-checkbox").prop("checked");
+
+        if(chk_status){
+            $("#luxbar-checkbox").prop("checked", false);
+        }else{
+            $("#luxbar-checkbox").prop("checked", true);
+        }
+    });
+});
