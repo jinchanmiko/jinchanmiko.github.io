@@ -1,3 +1,10 @@
+//ga
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137270771-1');
+
 //TOPページnav
 $(function(){
 var _window = $(window),
