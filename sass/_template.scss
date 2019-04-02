@@ -20,6 +20,8 @@ header {padding-top: 0;}
 .bar {padding: 10px;}
 .btn {text-decoration: none; text-align: center;display: block; padding: 16px;}
 
+
+
 .flexbox{@include flexbox;}
 .padLink/* #リンク用padding */ {padding-top: 68px;}
 
@@ -46,4 +48,10 @@ strong{font-weight: bold; font-size: 120%; line-height: 2; white-space: nowrap;}
 /* Footer */
 footer {margin-top: 20px; padding:16px; background-color:#eee;text-align: center; font-size: 80%;
 p {margin-bottom:16px;}
+}
+
+/* PC向け */
+@include media-pc{
+section{width: 80%; max-width: 800px; margin-left: auto; margin-right: auto;}
+.wrap{margin-left: auto; margin-right: auto;}
 }
