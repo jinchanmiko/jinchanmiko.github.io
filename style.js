@@ -40,6 +40,7 @@ $(function(){
 //fancyboxオプション設定
 $(function(){
 $('[data-fancybox="message"]').fancybox({
-	buttons : ["slideShow","close"]
+	buttons : ["slideShow","close"],
+    slideShow: {speed:8000}
 });
 });

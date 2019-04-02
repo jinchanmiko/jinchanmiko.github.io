@@ -15,7 +15,7 @@
  .msg:nth-child(#{$cnt}) a {
         // ↓現在のカウント数（$cnt）に少数値をかけた値を $delay 
         // ↓に指定することで時間差をつけることができる
-        @include animationValue(delay-fade, 0.5, ease, $cnt * 0.5 , 1, forwards);
+        @include animationValue(delay-fade, 0.8, ease, $cnt * 0.3 , 1, forwards);
     }
 }
 @mixin keyframes($name) {
