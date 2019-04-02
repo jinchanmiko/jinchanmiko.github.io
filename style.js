@@ -44,6 +44,7 @@ $('[data-fancybox="message"]').fancybox({
     animationDuration: 500,
     transitionEffect: "zoom-in-out",
     transitionDuration: 1000,
-    slideShow: {speed:8000}
+    slideShow: {speed:8000},
+    mobile:{clickSlide:"close"}
 });
 });
