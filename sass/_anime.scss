@@ -11,7 +11,7 @@
 
 // ↓through の後の数字を子要素の数字にすることで
 // ↓{}（ブレース）内の処理をその回数分繰り返します。
-@for $cnt from 1 through 38{
+@for $cnt from 1 through 50{
  .msg:nth-child(#{$cnt}) a {
         // ↓現在のカウント数（$cnt）に少数値をかけた値を $delay 
         // ↓に指定することで時間差をつけることができる
