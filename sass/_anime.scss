@@ -1,3 +1,10 @@
+/* hoverで背景をメインカラーからメインカラー2へアニメーション */
+.to-main{background-color: $mainColor2;
+color:$subColor;
+transition: background-color .5s
+}
+.to-main:hover {background-color:lighten($mainColor,15%);}
+
 /* メッセージページ用 */
 .msg-wrap {@include flexbox; flex-wrap: wrap;}
 .msg {width: 49%; @include media-pc{width:24%} margin-left: 0.5%; margin-right: 0.5%; margin-bottom: 1%;}

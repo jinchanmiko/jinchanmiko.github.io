@@ -189,8 +189,11 @@
   color: $subColor; }
 .luxbar-item {text-shadow: 0 0px 1px #fff,0 0 5px #fff,0 0 10px #fff}
 .luxbar-menu-light .active,
+.luxbar-menu-light .luxbar-item{  transition: background-color .5s;
+}
+.luxbar-menu-light .active,
 .luxbar-menu-light .luxbar-item:hover {
-  background-color: $mainColor;
+  background-color: rgba($mainColor,0.5);
   text-shadow: none;
   }
 .luxbar-menu-light .luxbar-hamburger span,
