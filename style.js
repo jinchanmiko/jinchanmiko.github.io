@@ -1,9 +1,9 @@
 //ga
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'UA-137270771-1');
+gtag('config', 'G-25T1V2ETND');
 
 //TOPページnav
 $(function(){
